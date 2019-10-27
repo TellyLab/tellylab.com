@@ -1,3 +1,4 @@
-# Telly Chen’s Lab - 天傲的杂货铺
-Feel free to [tianao.github.io](https://tianao.github.io)\
+# Telly’s Lab - 天傲的杂货铺
+Running at [tianao.github.io](https://tianao.github.io)\
+Feel free to play\
 欢迎来玩

@@ -14,15 +14,17 @@ Bad writing, write about anything.
 
 Bad English...mainly in Chinese.
 
+For any mistake, please let me know.
+
 ### 天傲的杂货铺
 
-这里是天傲的个人杂货铺，有的没的都往里堆。
+这里是天傲的个人杂货铺，啥东西都往里堆。
 
 硬盘记载数据，键盘发出声音。
 
-文笔不好，想到啥写啥。
+有的没的，请莫见怪。随缘更新，随时跑路。
 
-新建 - 编辑 - 生成 - 发布一挥而就，挖坑 - ~~填坑~~ - 弃坑 - 跑路一气呵成。
+如有纰漏，恳请指正。
 
 ### Telly
 

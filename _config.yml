@@ -21,7 +21,7 @@
 title: Telly’s Lab - 天傲的杂货铺
 author: Telly Chen 陈天傲
 email: chentianao@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines until "show_excerpts:"
   这里是天傲的个人杂货铺，有的没的都往里堆。
 show_excerpts: false # set to true to show excerpts on the homepage
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -89,6 +89,7 @@ theme: minima
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.

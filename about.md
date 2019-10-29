@@ -30,7 +30,7 @@ For any mistake, please let me know.
 
 ~~Telly means tele~~
 
-Involved in a lot, master none
+Involved in a lot, mastered none
 
 IT engineer, major in network engineering
 

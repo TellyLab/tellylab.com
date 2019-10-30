@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Hello, Again"
-date:   2019-10-28 05:00:00 +0800
-categories: Blog
+title: Hello, Again
+author: Telly Chen 陈天傲
+categories: [blog]
+tags: [tellyslab, life]
 ---
 
 Hello, again.

@@ -22,10 +22,11 @@ title: Telly’s Lab - 天傲的杂货铺
 author: Telly Chen 陈天傲
 email: chentianao@gmail.com
 description: >- # this means to ignore newlines until "show_excerpts:"
-  这里是天傲的个人杂货铺，有的没的都往里堆。
+  这里是天傲的杂货铺，有的没的都往里堆。
 show_excerpts: false # set to true to show excerpts on the homepage
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /:title
 
 # social links
 twitter_username: TianaoChen
@@ -81,8 +82,8 @@ minima:
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 header_pages:
-  - about.md
-  - about-zh.md
+  - about/index.md
+  - about/about-zh.md
 
 # Build settings
 theme: minima
@@ -90,6 +91,8 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+google_analytics: UA-151164894-1
 
 # Exclude from processing.
 # The following items will not be processed, by default.

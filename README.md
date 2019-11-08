@@ -1,4 +1,4 @@
-# Telly’s Lab - 天傲的杂货铺
+# Telly Lab - 天傲的杂货铺
 
 Running at [tianao.github.io](https://tianao.github.io)
 

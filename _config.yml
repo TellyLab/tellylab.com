@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Telly’s Lab - 天傲的杂货铺
+title: Telly Lab - 天傲的杂货铺
 author: Telly Chen 陈天傲
 email: chentianao@gmail.com
 description: >- # this means to ignore newlines until "show_excerpts:"

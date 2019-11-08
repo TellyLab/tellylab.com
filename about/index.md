@@ -3,9 +3,9 @@ layout: page
 title: About
 ---
 
-### Telly’s Lab
+### Telly Lab
 
-Telly’s Lab is a website for Telly and Telly’s everything.
+Telly Lab is a website for Telly and Telly’s everything.
 
 Bad memory, mark something down here.
 
@@ -27,9 +27,7 @@ For any mistake, please let me know.
 
 ### Telly
 
-~~Telly means tele~~
-
-Involved in a lot, mastered none
+Involved in a lot, mastered none.
 
 IT engineer, major in network engineering
 
@@ -37,7 +35,7 @@ Lives in Ningbo, China
 
 ### 天傲
 
-涉猎广泛，鲜有专精
+涉猎广泛，鲜有专精。
 
 IT 从业者，网络工程师
 

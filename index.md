@@ -11,7 +11,7 @@ layout: home
 # title: 
 ---
 
-欢迎光临天傲的杂货铺
+欢迎光临 Telly Lab
 
 这里正在装修，到处都是死胡同。
 

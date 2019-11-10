@@ -18,24 +18,24 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Telly Lab - 天傲的杂货铺
+title: Telly Lab - 科技杂货铺
 author: Telly Chen 陈天傲
 email: chentianao@gmail.com
 description: >- # this means to ignore newlines until "show_excerpts:"
-  这里是天傲的杂货铺，有的没的都往里堆。
+  这里是一个科技杂货铺，啥东西都往里堆。
 show_excerpts: false # set to true to show excerpts on the homepage
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tellylab.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title
 
 # social links
-twitter_username: TianaoChen
+# twitter_username: TianaoChen
 github_username:  Tianao
-# rss: rss
+rss: rss
 # dribbble_username: jekyll
-facebook_username: tianao.chen
+# facebook_username: tianao.chen
 # flickr_username: jekyll
-instagram_username: telly_chen
+# instagram_username: telly_chen
 # linkedin_username: jekyll
 # pinterest_username: jekyll
 # youtube_username: jekyll

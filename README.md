@@ -1,7 +1,13 @@
-# Telly Lab - 天傲的杂货铺
+# Telly Lab
 
-Running at [tianao.github.io](https://tianao.github.io)
+A website for anything about technology and so on.  
+一个科技杂货铺。
 
-Feel free to play
+Running at [tellylab.com](https://tellylab.com)
 
+## Collaborators
+
+@Tianao
+
+Feel free to play  
 欢迎来玩

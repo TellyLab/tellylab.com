@@ -3,9 +3,7 @@ layout: page
 title: About
 ---
 
-### Telly Lab
-
-Telly Lab is a website by Telly mainly for technology.
+Telly Lab is a website for anything about technology and so on.
 
 Bad memory, mark something down here.
 
@@ -15,7 +13,7 @@ Bad English... mainly in Chinese.
 
 For any mistake, please let me know.
 
-这里是一个科技杂货铺，啥东西都往里堆。
+Telly Lab 是一个科技杂货铺，啥东西都往里堆。
 
 硬盘记载数据，键盘发出声音。
 
@@ -23,9 +21,9 @@ For any mistake, please let me know.
 
 如有纰漏，恳请指正。
 
-### Author 作者
+## Authors 作者
 
-#### Telly 天傲
+### Telly 天傲
 
 Involved in a lot, mastered none.
 
@@ -39,10 +37,12 @@ IT 从业者，网络工程师
 
 现居浙江宁波
 
-#### Secret
+### Secret
 
-特邀合作作者
+Invited author
+
+Major in Information and Computing Science
+
+特邀作者
 
 计算机向本科在读
-
-暂时透露这么多。

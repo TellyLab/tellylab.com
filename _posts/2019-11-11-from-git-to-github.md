@@ -6,9 +6,11 @@ categories: [blog]
 tags: [git, github, workflow]
 ---
 
-笔者本想直接写一篇 GitHub 不完全指南，但总觉得要说 GitHub 还是要从 Git 说起。
+笔者本来想直接写一篇 GitHub 不完全指南，但总觉得要说 GitHub 还是要从 Git 说起。
 
-根据 [Git 官网](https://git-scm.com) 的说法，Git 是一个 *free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency*（被设计用于快速高效处理从小型到非常大型的一切项目的自由且开源的分布式版本控制系统）。这里先不去讨论「什么是 *free and open source*」、「*free* 究竟是自由还是免费」，我们只需要明确下什么是分布式版本控制系统。
+根据 [Git 官网](https://git-scm.com)的说法，Git 是一个 *free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency*（被设计用于快速高效处理从小型到非常大型的一切项目的自由且开源的分布式版本控制系统）。
+
+这里先不去讨论「什么是 *free and open source*」、「*free* 究竟是自由还是免费」，我们只需要明确下什么是分布式版本控制系统。
 
 ## Git 与版本控制
 
@@ -36,17 +38,19 @@ Git 本身是一个开源项目，同时也被用来代指这个项目的可执�
 
 Git 作为一个分布式的版本控制系统，在工作时并不要求（要求，指必须满足的需求）一个专用的（dedicated）中心化服务器。也就是说，Git 终端之间可以以 peer-to-peer 的形式通过（完全或非完全）星型拓扑实现对等互访，不同终端间独立地、直接地交换版本迭代信息。但这样的局限显而易见——信息交换效率低下、repository 难以被集中管理。而一个中心化的 Git 服务器可以解决这些问题。
 
+因此，使用一台中心化的 Git 服务器是 Git 在多人协作中的典型用法。
+
 ## Git 服务器与分布式
 
-也许你会问：那这样还是分布式吗，分布式版本控制的意义又何在？
+也许你会问：使用中心化服务器的 Git 还是分布式的吗，分布式版本控制的意义又何在？
 
-诚然，在数据交换方式上，这已经不是分布式了。但这不妨碍「没有一个权威（且唯一，这里的唯一指的是 unique 而非副本的拷贝唯一）的中心化副本这条分布式真理」，因为即使对于 master branch，在最后一条「commit 被 push」或「pull request 被 merge」之前，服务器也不知道真正的 master branch 是怎样的。换言之，Git 服务器无法实时知道 master branch 乃至 repository 的权威状态——因为没有权威——因此使用中心化 Git 服务器的 Git 系统依旧是分布式的。
+诚然，在数据交换方式上，这已经不是分布式了。但这不妨碍「没有一个权威（且唯一，这里的唯一指的是 unique 而非副本的拷贝唯一）的中心化副本这条分布式版本控制的真理」，因为即使对于 master branch，在最后一条「commit 被 push」或「pull request 被 merge」之前，服务器也不知道真正的 master branch 是怎样的。换言之，Git 服务器无法实时知道 master branch 乃至 repository 的权威状态——因为没有权威——因此使用中心化 Git 服务器的 Git 系统依旧是分布式的。
 
-那分布式版本控制的意义又何在呢？或者说，分布式版本控制相较于传统的中心化版本控制有哪些有些优势？其实如果只是说 Git 的优势，Wikipedia 和其他技术博客上大可找到一堆，且反之亦然。但如果把这个问题扩大到中心化版本控制和分布式版本控制，笔者觉得自己对他们的理解可能还鞭长莫及。
+那分布式版本控制的意义又何在呢？或者说，分布式版本控制相较于传统的中心化版本控制有哪些有些优势？其实如果只是说 Git 的优势，Wikipedia 和其他技术博客上大可找到一堆，且反之亦然。Git 因诸多硬核特性而风靡于大型项目和互联网公司，而 SVN 被认为具有更丰富的权限管理特性，同时相对友好易上手（一定程度上取决于 GUI 实现）。据不可靠消息，华为和 BAT 内部都有在使用 SVN 或魔改 SVN。但如果把这个问题扩大到中心化版本控制和分布式版本控制，笔者觉得自己对他们的理解可能还鞭长莫及。
 
 Anyway，对于 Git 和分布式，笔者的个人看法是：
 
-* Git 因诸多硬核特性而风靡于大型项目和互联网公司，但君不见 Microsoft 内部也有在使用魔改 SVN，SVN 同时也被认为相对更加友好易上手（一定程度上取决于 GUI 实现）。因此单说 SVN 和 Git，很难评价孰优孰劣。
+* 无论单说 SVN 和 Git 还是集中式与分布式版本控制，都很难评价孰优孰劣。
 
 * Git 化的潮流确实势不可挡，但成就 Git 的是 Git 本身，而不是分布式。
 
@@ -60,4 +64,4 @@ Git 托管的本质就是全权的 Git repository 托管，同时顺带提供身
 
 基于 Git 的 SaaS 服务商有很多，比如数据库翻车直播恢复的 GitLab、SVN 起家主打私有库的 Bitbucket、曾用名「码云」的 Gitee、Git/SVN 双修的 CODING，但最最最著名的，还是几乎成为了 Git 的代名词的 GitHub。
 
-关于 GitHub，请看 [GitHub 不完全指南](/github-guide.html) 。
+关于 GitHub，请看 [GitHub 不完全指南](/github-guide.html)。

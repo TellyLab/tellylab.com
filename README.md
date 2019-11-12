@@ -1,15 +1,13 @@
-# Telly Lab
+# Telly Lab 科技杂货铺
 
-A website for anything about technology and so on  
-一个科技杂货铺
+A website for anything about technology, and so on.  
+一个科技杂货铺，啥都往里堆。
 
-Running at [tellylab.com](https://tellylab.com)
+**Running at [tellylab.com](https://tellylab.com)**
 
 ## Collaborators
 
 @Tianao
 
----
-
-Feel free to play  
-欢迎来玩
+Feel free to play.  
+欢迎来玩。

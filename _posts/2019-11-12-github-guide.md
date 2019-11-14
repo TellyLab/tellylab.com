@@ -8,7 +8,7 @@ tags: [git, github, workflow]
 
 我们常说的 GitHub 是指 GitHub, Inc.，一家位于美国的私人公司，于 2018 年被 Microsoft Corporation 收购。其持有 [GitHub.com](https://github.com) 域名（域名是大小写不敏感的），但不以此为唯一对外开展业务的域名。
 
-GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），最为大众所常用的就是完全 Git 托管。
+GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），最为大众所常用的就是完全 Git 托管服务。
 
 以下是关于 GitHub 的**不完全**指南。
 

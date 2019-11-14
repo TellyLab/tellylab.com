@@ -8,7 +8,7 @@ tags: [git, github, workflow]
 
 我们常说的 GitHub 是指 GitHub, Inc.，一家位于美国的私人公司，于 2018 年被 Microsoft Corporation 收购。其持有 [GitHub.com](https://github.com) 域名（域名是大小写不敏感的），但不以此为唯一对外开展业务的域名。
 
-GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），最为大众所常用的就是完全 Git 托管服务。
+GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），最为大众所常用的就是完全 Git 托管。
 
 以下是关于 GitHub 的**不完全**指南。
 
@@ -163,5 +163,31 @@ git@github.com:TellyLab/tellylab.com.git
 ## 理解 GitHub 工作流
 
 （未完待续，笔者周末要去看周董，so...
+
+### 选择协作模式
+
+#### 共享仓库模式
+
+#### 复刻拉取模式
+
+### 创建分支
+
+### 执行 Commit
+
+### 发起 Pull Request
+
+### 合并分支
+
+## GitHub 进阶使用
+
+### 排除文件
+
+#### 针对仓库排除
+
+#### 针对本地仓库副本排除
+
+#### 本地全局排除
+
+### 与同步网盘配合使用
 
 （最后更新于 2019-11-15）

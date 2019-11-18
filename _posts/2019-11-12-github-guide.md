@@ -6,9 +6,9 @@ categories: [blog]
 tags: [git, github, workflow]
 ---
 
-我们常说的 GitHub 是指 GitHub, Inc.，一家位于美国的私人公司，于 2018 年被 Microsoft Corporation 收购。其持有 [GitHub.com](https://github.com) 域名（域名是大小写不敏感的），但不以此为唯一对外开展业务的域名。
+我们常说的 GitHub 是指 GitHub, Inc.，一家位于美国的私人公司，于 2018 年被 Microsoft Corporation 收购。其持有 [GitHub.com](https://GitHub.com) 域名（域名是大小写不敏感的），但不以此为唯一对外开展业务的域名。
 
-GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），最为大众所常用的就是完全 Git 托管服务。
+GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），其中最为大众所熟知且常用的就是位于 GitHub.com 的完全 Git 托管服务。因此，我们常说的 GitHub 特指 GitHub.com。
 
 以下是关于 GitHub 的**不完全**指南。
 
@@ -16,7 +16,7 @@ GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），最为
 
 在注册 GitHub 账户时，需要选择一个 GitHub 账户计划。
 
-根据 [GitHub 的官方说法](https://help.github.com/en/github/getting-started-with-github/githubs-products)，GitHub 有多种产品，其实就是不同的的账户计划。按照用途可以分为个人计划和团队计划，目前个人计划分为免费计划和每月 7 刀的专业计划，免费计划可以几乎无条件但有限制地使用。
+根据 [GitHub 官方说法](https://help.github.com/en/github/getting-started-with-github/githubs-products)，GitHub（特指 GitHub.com）有多种产品，其实就是 GitHub.com 的不同账户计划。按照用途可以分为个人计划和团队计划，目前个人计划分为免费计划和每月 7 刀的专业计划，免费计划可以几乎无条件但有限制地使用。
 
 除了以上提到的几种账户类型外，GitHub 还有一个组织（organization）的概念。组织像其他用户账户一样，拥有仓库（repositories）、项目（projects）、包（packages），也拥有和其他账户统一的用户名命名空间（也就是说组织名和用户名不能重复），此外还拥有一个和个人帐户不太一样的门户页（例如[本站的门户页](https://github.com/Tianao)）。但组织不被视为一个账户，组织不能直接注册，亦不能直接使用组织名登录到 GitHub。想要使用组织身份，需要首先拥有一个普通账户，然后通过普通账户新建组织。在新建组织时，需要选择一个团队计划，GitHub 对于开源团队使用的团队计划是免费的。
 
@@ -24,11 +24,11 @@ GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），最为
 
 ## Hello World
 
-Hello World 是计算机编程的一个经典入门项目。在 GitHub，同样有一篇名为 [*Hello World*](https://guides.github.com/activities/hello-world/) 的入门指南。
+Hello World 是一个计算机编程的经典入门项目。在 GitHub，同样有一篇名为 [*Hello World*](https://guides.github.com/activities/hello-world/) 的入门指南。
 
 但由于正在阅读的本文是一篇不完全指南，笔者不会逐句翻译这篇官方指南。
 
-## 访问 GitHub 仓库与执行基础操作
+## 访问 GitHub 仓库与执行基本操作
 
 本章将通过介绍几种用户访问 GitHub 仓库的方式，引出一些 Git 的基本概念，然后讲述一些相关的基础操作。
 
@@ -50,9 +50,9 @@ Hello World 是计算机编程的一个经典入门项目。在 GitHub，同样�
 
 用于同一个项目的所有同名/同源 Git 仓库都被视为同一个 Git 仓库，但同一个 Git 仓库在不同时间和/或不同物理位置的不同拷贝（哪怕内容事实上相同）被视为同一个 Git 仓库的不同副本，简称仓库副本。
 
-#### 分支
+#### Branch
 
-Git 通过分支（branch）机制保证多条工作流在并行、异步推进时的相互独立。
+Git 通过 branch（分支）机制保证多条工作流在并行、异步推进时的相互独立。
 
 分支就像是平行宇宙，不同的分支对用户展示为不同的工作时空。具体来讲，不同的工作分支对用户展示为仓库目录的不同副本，用户在 A 分支下对 d 目录中 f 文件所做的任何修改都不会体现在 B 分支下 d 目录中的 f 文件身上——除非~~时空错乱~~进行分支合并（merge）。
 
@@ -60,11 +60,13 @@ Master branch 是新仓库建立时的唯一分支，也是一个新仓库副本
 
 #### Commit
 
-在 Git 中，对分支提交修改的行为/动作被称作 commit，因此 commit 既是一个名词也是一个动词。我们可以说：commit 一下、这次 commit、那些 commits。
+在 Git 中，对分支提交修改的行为/动作被称作 commit（一说 commit 被译作「提交」，但笔者选择不译），因此 commit 既是一个名词也是一个动词。我们可以说：commit 一下、这次 commit、那些 commits。
 
 Commit 是对分支进行的，因此 commit 的实质是 commit to a branch。
 
 Commit 操作本身只会对执行 commit 时的工作分支产生影响，但是如果因为其他操作导致这某次 commit 对其他分支产生了影响，这次 commit 也会出现在其他分支的 commit 历史中。
+
+Commit 记录既可以指单次 commit 本身（也就是「一条 commit 记录」），也可以指 commit 记录的集合（也就是多次 commit 操作的历史记录）。
 
 ### 使用 GitHub Desktop
 
@@ -86,9 +88,9 @@ Commit 操作本身只会对执行 commit 时的工作分支产生影响，但�
 
 #### 工作目录
 
-工作目录在路径上等同于本地仓库副本在本地文件系统中的目录，但是在这个路径下，除了工作目录的内容外，还有一些 Git 仓库本身的工作文件。这些文件定义了 Git 仓库的一些属性、记录了分支和 commit 信息。依靠这些信息，Git 可以在用户切换分支时刷新工作目录的内容。
+工作目录在路径上等同于本地仓库副本在本地文件系统中的目录，但工作目录（或工作目录的内容）并不等同于本地仓库副本本身。在这个路径下，除了工作目录的内容外，还有一些 Git 仓库本身的工作文件。这些文件定义了 Git 仓库的一些属性、记录了分支和 commit 信息。依靠这些信息，Git 便可以（有能力）在用户切换分支时刷新工作目录的内容。
 
-#### Checkout
+#### 切换工作分支
 
 在 Git 中，「将仓库副本的工作分支切换到指定的分支并刷新工作目录」的操作/行为叫做 checkout。
 
@@ -108,7 +110,9 @@ Git 允许同一个仓库在不同终端上的不同副本异步地执行 commit
 
 #### Fetch
 
-在 Git 终端上，如果用户想要知道当前的本地仓库副本与远程仓库副本有哪些不同，可以执行 fetch 操作。这一操作将从远程仓库下载所有 commit 记录，但是无论是否有新的 commit，fetch 都不会对本地工作目录的内容进行任何修改。因此，用户可以随时随便随意 fetch。事实上，GitHub Desktop 也会每隔一段时间自动执行 fetch，但这不妨碍用户在进行任何 Git 操作前手动执行一次（或多次）fetch 操作，以确保进行接下来的操作的决定是正确的。
+在 Git 终端上，执行 fetch 操作将从远程仓库下载所有 commit 记录。
+
+如果用户想要知道当前的本地仓库副本与远程仓库副本有哪些不同，则可以执行 fetch 操作，但是无论是否有新的 commit，fetch 都不会对本地工作目录的内容进行任何修改。因此，用户可以随时随便随意 fetch。事实上，GitHub Desktop 也会每隔一段时间自动执行 fetch，但这不妨碍用户在进行任何 Git 操作前手动执行一次（或多次）fetch 操作，以确保进行接下来的操作的决定是正确的。
 
 在任何时候，GitHub Desktop 都将准实时地显示当前工作目录与本地仓库副本中最新一次 commit 记录的差异。
 
@@ -160,15 +164,86 @@ git@github.com:TellyLab/tellylab.com.git
 
 其中 TellyLab 是本站在 GitHub 的组织名，tellylab.com 是本站的项目仓库名。
 
+#### Git 命令
+
+在通过标准 Git CLI 访问包括 GitHub 仓库在内的任何 Git 仓库时，都需要使用 git 命令。在这里，将 git 的首字母小写的原因在于 Git 的 CLI 命令正是「git」（并不是所有 CLI 应用的命令都是如此）。
+
+GitHub Training 有一份 Git 速查 PDF，名为 [*Git Cheat Sheet*](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)，其中简单介绍了常用的 git 命令。依旧由于正在阅读的本文是一篇不完全指南，笔者不会逐句翻译这份 PDF。
+
+需要注意的是，如果你觉得接下来的内容是笔者在逐词翻译这份 PDF 中的某句话，那么你可能感觉错了。笔者对于某些命令的介绍和描述将和这份 PDF 中的有所出入——这正是笔者要写这篇文章的原因之一——如果你更希望阅读英文原版，请移步 [*Git Cheat Sheet*](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)。
+
+在介绍下列命令时，假设读者已经具有基础的 *nix/POSIX CLI/shell 操作知识。
+
+$ git config --global user.name "[name]"  
+全局设定你希望在 commit 记录中显示的用户名字
+
+$ git config --global user.email "[email address]"  
+全局设定你希望在 commit 记录中显示的 email 地址
+
+$ git config --global color.ui auto  
+全局设定 CLI 输出色彩为自动（也就是彩色，且配色方案为默认）
+
+$ git branch [branch-name]  
+创建新分支
+
+$ git checkout [branch-name]  
+切换当前工作分支并用新分支的仓库目录刷新工作目录
+
+$ git merge [branch]  
+将指定分支的 commit 记录合并进当前分支（这既意味着当前分支副本内容的刷新也意味着 commit 记录的继承）
+
+$ git branch -d [branch-name]  
+删除指定分支
+
+$ git init  
+将当前工作目录（这里指 pwd 打印出的那个目录，无关于 Git 的工作目录）初始化为一个 Git 仓库（虽然初始化后的这个目录也确实在路径上等同于这个 Git 仓库的工作目录）
+
+$ git clone [url]  
+从指定地址克隆一个 Git 仓库到本地（URL 的存在意味着指定地址并不一定是网络上的远程地址）
+
+$ git fetch  
+执行 fetch 操作
+
+$ git merge  
+执行 merge 操作
+
+$ git push  
+执行 push 操作
+
+$ git pull  
+执行 pull 操作
+
+$ git log  
+列出当前分支的 commit 记录
+
+$ git log --follow [file]  
+列出指定文件的版本历史，包括对其产生影响的 commit 记录和重命名记录
+
+$ git diff [first-branch]...[second-branch]  
+展示两个分支的内容差异
+
+$ git show [commit]  
+展示指定 commit 记录的元数据（metadata）和内容变化
+
+$ git add [file]  
+将指定文件添加到 Git 仓库的版本控制范围内（官方中文说法好像是建立跟踪）
+
+$ git commit -m "[descriptive message]"  
+执行 commit 操作
+
+$ git reset [commit]  
+将 commit 历史撤销到指定 commit 后的状态（也就是撤销指定 commit 后的所有 commit 记录，不包括被指定的 commit 本身），但不对本地工作目录的内容进行回滚
+
+$ git reset --hard [commit]  
+将 commit 历史撤销到指定 commit 后的状态，同时对本地工作目录的内容进行回滚（请注意，这是一条危险命令，一旦误操作，git 本身不提供任何反回滚能力；如有必要，则需考虑使用文本编辑器/IDE 的撤销功能或独立于 Git 的文件备份/快照/版本管理功能进行挽回；如果针对整个本地仓库副本所在的目录进行回滚，则可能会因 commit 记录随之回滚而令问题变得更加复杂，在执行此类操作前请确保你对 Git 的工作原理足够熟悉）
+
 ## 理解 GitHub 工作流
 
-（未完待续，笔者周末要去看周董，so...
-
-### 选择协作模式
+### 协作模式
 
 #### 共享仓库模式
 
-#### 复刻拉取模式
+#### Fork 拉取模式
 
 ### 创建分支
 
@@ -189,5 +264,7 @@ git@github.com:TellyLab/tellylab.com.git
 #### 本地全局排除
 
 ### 与同步网盘配合使用
+
+（未完待续）
 
 （最后更新于 2019-11-15）

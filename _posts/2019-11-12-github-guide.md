@@ -20,11 +20,11 @@ GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），其中
 
 除了以上提到的几种账户类型外，GitHub 还有一个组织（organization）的概念。组织像其他用户账户一样，拥有仓库（repositories）、项目（projects）、包（packages），也拥有和其他账户统一的用户名命名空间（也就是说组织名和用户名不能重复），此外还拥有一个和个人帐户不太一样的门户页（例如[本站的门户页](https://github.com/Tianao)）。但组织不被视为一个账户，组织不能直接注册，亦不能直接使用组织名登录到 GitHub。想要使用组织身份，需要首先拥有一个普通账户，然后通过普通账户新建组织。在新建组织时，需要选择一个团队计划，GitHub 对于开源团队使用的团队计划是免费的。
 
-使用组织有很多好处，即使是在规模不大的团队中，也可以体会到组织在去中心化和权限管理方面的优势，从而让一个团队真正以组织的模式运行——这是 GitHub 基于 Git 而高于 Git 的地方之一，也是笔者在[《从 Git 到 GitHub》](/from-git-to-github.html)中提到的基于 Git 的 SaaS 的增值服务部分。
+使用组织有很多好处，即使是在规模不大的团队中，也可以体会到组织在去中心化和权限管理方面的优势，从而让一个团队真正以组织的模式运行——这是 GitHub 基于 Git 而高于 Git 的地方之一，也是笔者在[从 Git 到 GitHub](/from-git-to-github.html) 中提到的基于 Git 的 SaaS 的增值服务部分。
 
 ## Hello World
 
-Hello World 是一个计算机编程的经典入门项目。在 GitHub，同样有一篇名为 [*Hello World*](https://guides.github.com/activities/hello-world/) 的入门指南。
+Hello World 是一个计算机编程的经典入门项目。在 GitHub，同样有一篇名为 [Hello World](https://guides.github.com/activities/hello-world/) 的入门指南。
 
 但由于正在阅读的本文是一篇不完全指南，笔者不会逐句翻译这篇官方指南。
 
@@ -168,9 +168,9 @@ git@github.com:TellyLab/tellylab.com.git
 
 在通过标准 Git CLI 访问包括 GitHub 仓库在内的任何 Git 仓库时，都需要使用 git 命令。在这里，将 git 的首字母小写的原因在于 Git 的 CLI 命令正是「git」（并不是所有 CLI 应用的命令都是如此）。
 
-GitHub Training 有一份 Git 速查 PDF，名为 [*Git Cheat Sheet*](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)，其中简单介绍了常用的 git 命令。依旧由于正在阅读的本文是一篇不完全指南，笔者不会逐句翻译这份 PDF。
+GitHub Training 有一份 Git 速查 PDF，名为 [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)，其中简单介绍了常用的 git 命令。同样，笔者不会逐句翻译这份 PDF。
 
-需要注意的是，如果你觉得接下来的内容是笔者在逐词翻译这份 PDF 中的某句话，那么你可能感觉错了。笔者对于某些命令的介绍和描述将和这份 PDF 中的有所出入——这正是笔者要写这篇文章的原因之一——如果你更希望阅读英文原版，请移步 [*Git Cheat Sheet*](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)。
+需要注意的是，如果你觉得接下来的内容是笔者在逐词翻译这份 PDF 中的某句话，那么你可能感觉错了。笔者对于某些命令的介绍和描述将和这份 PDF 中的有所出入——这正是笔者要写这篇文章的原因之一——如果你更希望阅读英文原版，请移步 [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)。
 
 在介绍下列命令时，假设读者已经具有基础的 *nix/POSIX CLI/shell 操作知识。
 
@@ -229,7 +229,7 @@ $ git add [file]
 将指定文件添加到 Git 仓库的版本控制范围内（官方中文说法好像是建立跟踪）
 
 $ git commit -m "[descriptive message]"  
-执行 commit 操作
+执行 commit 操作并记录描述性信息（Commit 摘要）
 
 $ git reset [commit]  
 将 commit 历史撤销到指定 commit 后的状态（也就是撤销指定 commit 后的所有 commit 记录，不包括被指定的 commit 本身），但不对本地工作目录的内容进行回滚
@@ -239,19 +239,55 @@ $ git reset --hard [commit]
 
 ## 理解 GitHub 工作流
 
+Git 尤其是 GitHub 的核心在于协作，在了解基本操作后，理解 GitHub 的工作流是快速上手 GitHub 多人协作项目的极佳方式。在 GitHub，有一篇名为 [Understanding the GitHub flow](https://guides.github.com/introduction/flow/) 的官方指南，同样，笔者不会翻译。
+
 ### 协作模式
+
+通过 GitHub 进行多用户协作时有两种主流的协作模式（collaborative models，实为协作模型，但笔者愿意译作协作模式），但无论是协作模式还是整个工作流都不是固有标准，因此用户可以任意选择、演绎甚至创建协作模式和/或工作流。[GitHub 的官方文档](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-collaborative-development-models)简单介绍了这两种协作模式，同样，笔者不会翻译。
 
 #### 共享仓库模式
 
+共享仓库模式（shared repository model）应该是最传统的 Git 协作模式，顾名思义，所有协作者在执行 commit 操作时均共享同一个 Git 仓库。在 GitHub 上，这里的同一个 Git 仓库是指一个特定用户账户/组织名下的特定仓库（比如 TellyLab/tellylab.com 就是一个特定的仓库），不同协作者的实际 commit 对象是同一个仓库的不同副本，然后通过 push 操作将自己的 commit 记录推送至位于 GitHub 服务器的中央仓库副本。
+
+在共享仓库模式下，所有的协作者都拥有向中央仓库 push 的权限，因此，从安全的角度讲，共享仓库模式仅适用于没有非信任贡献者参与的自治项目——所有协作者共商码是、求同除异，任何人都可以是项目的主宰。
+
+在 GitHub.com 上，向仓库添加协作者的路径是：仓库页 - Settings - Collaborators & teams.
+
 #### Fork 拉取模式
+
+Fork 拉取模式（fork and pull model）一说为复刻拉取模式，但笔者认为这种说法/翻译并不妥当，一来复刻给人以一种克隆的感觉，但 fork 的本质是一种保留对上游依赖关系的跨用户分支，复刻没有体现出他和克隆的区别；二来 fork 一词本身并无任何复刻之意；三来唱片/出版/印刷业中的复刻均为 re- 开头的单词，明显有「复」字之义，有别于 fork。对于 fork 的另一种理解是使用叉子从别人那里叉一片肉过来，这种解释虽没有体现出对上游的依赖关系，但贵在生动形象，无伤大雅。
+
+在采用 fork 拉取模式的项目中，fork 拉取和共享仓库两种模式往往同时存在。Fork 拉取模式的特别之处就在于 fork 和拉取。对于项目仓库的所有者和受信任的协作者，他们采用共享仓库的模式进行协作。而对于外部贡献者，则需要首先 fork 源仓库（上游仓库）到自己名下，然后对自己名下的 fork 仓库执行 commit，在完成阶段性贡献后，外部贡献者如果希望将自己的成果并入源仓库，则需要由源仓库的协作者（确切地讲是有写仓库权限的用户）执行 pull 操作将下游 fork 仓库的 commit pull 入上游源仓库。在这种情况下，下游用户需要发起 pull request 来请求上游仓库维护者发起 pull 操作。
+
+Fork 拉取模式在 GitHub 上非常常见，因为几乎所有的知名开源项目都是采用 fork 拉取模式吸纳外部贡献的。这种模式的工作原理决定了只有受信任的协作者才能最终决定源仓库的内容，因此可以避免广大想法/立场/目的不一的外部贡献者彼此间的分歧导致的分支冲突甚至破坏性编辑，同时也可以通过源仓库所有者的声誉为项目质量背书（但这里的背书不意味着担保和/或负责，具体权利与义务需要参见项目 license）。
+
+在 GitHub.com 上，fork 一个仓库的方式是点击仓库页右上角的 Fork 按钮。
 
 ### 创建分支
 
+多人协作项目的一个常见分工原则就是不同的团队负责不同的并行推进路线，每条推进路线对应一个分支。比如分支 A 用于新功能开发、分支 B 用于已知 bug 修复、分支 C 用于集成测试，前两个分支均基于 master，而第三个分支则基于前两个，同时，对这三个分支所做的任何 commit 都不会影响 master——直到至少一者被合并入 master。
+
+Master 分支的使用原则在于其在任何时候都应当是可发布（亦或者是部署/交付）的，因此，在通过最终测试前，不应将其他分支并入 master 分支。分支的命名应当是具有描述性的，比如 two-factor-sec, login-bug-fix, final-test.
+
+要开始一条工作路线，从创建一个分支开始。要加入一条现有的工作路线，在成功访问到目标仓库后，直接切换当前工作分支到目标工作路线所对应的分支即可。
+
 ### 执行 Commit
+
+分支一旦被创建，用户便可开始正式工作，并随时执行 commit。在执行 commit 时，应当注意附上有意义的 commit 信息，这既是给协作者的参考，也是给自己的备忘，以便在未来出现问题时可以快速、准确地溯源、回滚。
 
 ### 发起 Pull Request
 
+Pull request 是 GitHub 的杀手功能之一，单从 Git 的角度来讲，pull request 允许 commit 者向其他协作者发起一个让对方 pull 自己所 push 的 commit(s) 的请求~~（这段好 4A，冇办法）~~。无论你是不是具有直接 push 权限（写仓库权限）的协作者，都可以发起一个 pull request 来请求其他协作者向自己的仓库（或你们共享的仓库）拉取你所做的 commit(s)。
+
+除此之外，pull request 机制本身提供了强大的协作沟通、自动化流程追踪和合并策略选择能力。用户对于一个 pull request 的响应并不是要么接受要么拒绝的布尔型，也不是一旦接到请求就必须立即作出决定。实际上，在一个分支刚建立起时就发起 pull request 请求，然后令这个请求在整个分支的生命周期内保持待决状态是很常见的做法，此时的 pull request 就是一个自动化流程追踪系统。在一个 pull request 中，用户可以使用 「@提及系统」来提及一个希望收到明确请求的对象（这个对象既可以是用户也可以是组织中的团队）；还可以在这个 pull request 下与其他协作者沟通，甚至附上 emoji 和图片；也可以选择继续提交新的 commit，直到大家达成共识（或者做出妥协）；最后，具有写仓库权限的协作者可以 merge 这个 pull request，通过依次执行 merge pull request 和 confirm merge 操作将其并入目标分支。
+
+在共享仓库模式中，pull request 通常用于发起 review 请求，然后将一个分支并入另一个分支——虽然发起者本身就具有直接 push 和 merge 的权限，但作为协作流程的一部分，在合并分支之前通过 pull request 知会他人、接受 review 并征求他人意见，往小了说是对其他团队成员的尊重，往大了说这关系到生产安全。
+
+在 fork 拉取模式中，pull request 通常用于请求将一个下游 fork 仓库的分支并入上游源仓库的分支，由于这种模式下位于下游的、源仓库外部的贡献者不具有对源仓库的直接写权限，因此只能通过 pull request 方式来请求上游源仓库的维护者对其希望贡献 commit 的意愿作出回应（视情况作出 merge 决定或给出驳回原因）。
+
 ### 合并分支
+
+在大型或关键生产项目中，通过单元测试的分支往往还要被并入集成测试/系统测试/验收测试等分支进行最终测试，因此在通过最终测试前，不应将其他分支并入 master 分支（这一点在刚才已经说过了）。而如果某个分支没有通过某次测试，则应当根据 commit 记录进行回滚，然后修改持续分支、并入测试分支，直到通过测试。对于已经被并入测试分支且通过测试的分支、已经通过最终测试并被并入 master 的分支，他们的生命周期便可以（但不必须）结束了。除非要进行持续交付，否则可以安全地删除已被合并入其他分支的分支——这种状态下的分支被称为头分支，GitHub 提供了自动删除头分支的功能，这个功能默认关闭，针对特定仓库开启这个功能的路径是：仓库页 - Settings - Options - Automatically delete head branches. 被 GitHub 自动删除的分支是可以被恢复的，恢复入口之一在：仓库页 - Pull requests.
 
 ## GitHub 进阶使用
 
@@ -265,6 +301,6 @@ $ git reset --hard [commit]
 
 ### 与同步网盘配合使用
 
-（未完待续）
+（未完待续，在现有标题的内容被补全后，本文即转入随缘更新状态，笔者将看心情更新 GitHub 的进阶使用方法）
 
-（最后更新于 2019-11-15）
+（最后更新于 2019-11-19）

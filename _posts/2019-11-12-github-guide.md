@@ -226,7 +226,7 @@ $ git show [commit]
 展示指定 commit 记录的元数据（metadata）和内容变化
 
 $ git add [file]  
-将指定文件添加到 Git 仓库的版本控制范围内（官方中文说法好像是建立跟踪）
+将指定文件添加到 Git 仓库的版本控制范围内（为新文件建立跟踪），或将指定文件添加到下一次 commit 中（把已跟踪的文件放到暂存区）等（这是一条颇具迷惑性的多功能命令，关于 git add 的更多细节，请看[Git 官方文档](https://git-scm.com/book/zh/v2/Git-基础-记录每次更新到仓库)）
 
 $ git commit -m "[descriptive message]"  
 执行 commit 操作并记录描述性信息（Commit 摘要）

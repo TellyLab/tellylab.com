@@ -174,68 +174,68 @@ GitHub Training 有一份 Git 速查 PDF，名为 [Git Cheat Sheet](https://gith
 
 在介绍下列命令时，假设读者已经具有基础的 *nix/POSIX CLI/shell 操作知识。
 
-$ git config --global user.name "[name]"  
+`$ git config --global user.name "[name]"`  
 全局设定你希望在 commit 记录中显示的用户名字
 
-$ git config --global user.email "[email address]"  
+`$ git config --global user.email "[email address]"`  
 全局设定你希望在 commit 记录中显示的 email 地址
 
-$ git config --global color.ui auto  
+`$ git config --global color.ui auto`  
 全局设定 CLI 输出色彩为自动（也就是彩色，且配色方案为默认）
 
-$ git branch [branch-name]  
+`$ git branch [branch-name]`  
 创建新分支
 
-$ git checkout [branch-name]  
+`$ git checkout [branch-name]`  
 切换当前工作分支并用新分支的仓库目录刷新工作目录
 
-$ git merge [branch]  
+`$ git merge [branch]`  
 将指定分支的 commit 记录合并进当前分支（这既意味着当前分支副本内容的刷新也意味着 commit 记录的继承）
 
-$ git branch -d [branch-name]  
+`$ git branch -d [branch-name]`  
 删除指定分支
 
-$ git init  
+`$ git init`  
 将当前工作目录（这里指 pwd 打印出的那个目录，无关于 Git 的工作目录）初始化为一个 Git 仓库（虽然初始化后的这个目录也确实在路径上等同于这个 Git 仓库的工作目录）
 
-$ git clone [url]  
+`$ git clone [url]`  
 从指定地址克隆一个 Git 仓库到本地（URL 的存在意味着指定地址并不一定是网络上的远程地址）
 
-$ git fetch  
+`$ git fetch`  
 执行 fetch 操作
 
-$ git merge  
+`$ git merge`  
 执行 merge 操作
 
-$ git push  
+`$ git push`  
 执行 push 操作
 
-$ git pull  
+`$ git pull`  
 执行 pull 操作
 
-$ git log  
+`$ git log`  
 列出当前分支的 commit 记录
 
-$ git log --follow [file]  
+`$ git log --follow [file]`  
 列出指定文件的版本历史，包括对其产生影响的 commit 记录和重命名记录
 
-$ git diff [first-branch]...[second-branch]  
+`$ git diff [first-branch]...[second-branch]`  
 展示两个分支的内容差异
 
-$ git show [commit]  
+`$ git show [commit]`  
 展示指定 commit 记录的元数据（metadata）和内容变化
 
-$ git add [file]  
+`$ git add [file]`  
 将指定文件添加到 Git 仓库的版本控制范围内（为新文件建立跟踪），或将指定文件添加到下一次 commit 中（把已跟踪的文件放到暂存区）等（这是一条颇具迷惑性的多功能命令，关于 git add 的更多细节，请看这篇 [Git 官方文档](https://git-scm.com/book/zh/v2/Git-基础-记录每次更新到仓库)）
 
-$ git commit -m "[descriptive message]"  
+`$ git commit -m "[descriptive message]"`  
 执行 commit 操作并记录描述性信息（Commit 摘要）
 
-$ git reset [commit]  
+`$ git reset [commit]`  
 将 commit 历史撤销到指定 commit 后的状态（也就是撤销指定 commit 后的所有 commit 记录，不包括被指定的 commit 本身），但不对本地工作目录的内容进行回滚
 
-$ git reset --hard [commit]  
-将 commit 历史撤销到指定 commit 后的状态，同时对本地工作目录的内容进行回滚（请注意，这是一条危险命令，一旦误操作，git 本身不提供任何反回滚能力；如有必要，则需考虑使用文本编辑器/IDE 的撤销功能或独立于 Git 的文件备份/快照/版本管理功能进行挽回；如果针对整个本地仓库副本所在的目录进行回滚，则可能会因 commit 记录随之回滚而令问题变得更加复杂，在执行此类操作前请确保你对 Git 的工作原理足够熟悉）
+`$ git reset --hard [commit]`  
+将 commit 历史撤销到指定 commit 后的状态，同时对本地工作目录的内容进行回滚（请注意，这是一条危险命令，一旦误操作，git 本身不提供任何反回滚能力；如有必要，则需考虑使用文本编辑器/IDE 的撤销功能或独立于 Git 的文件备份/快照/版本管理功能进行挽回；如果针对整个本地仓库副本所在的目录进行回滚，则可能会因 commit 记录随之回滚而令问题变得更加复杂，在执行此类操作前请确保你对 Git 的工作原理足够熟悉）。
 
 ## 理解 GitHub 工作流
 
@@ -279,7 +279,7 @@ Master 分支的使用原则在于其在任何时候都应当是可发布（亦�
 
 Pull request 是 GitHub 的杀手功能之一，单从 Git 的角度来讲，pull request 允许 commit 者向其他协作者发起一个让对方 pull 自己所 push 的 commit(s) 的请求~~（这段好 4A，冇办法）~~。无论你是不是具有直接 push 权限（写仓库权限）的协作者，都可以发起一个 pull request 来请求其他协作者向自己的仓库（或你们共享的仓库）拉取你所做的 commit(s)。
 
-除此之外，pull request 机制本身提供了强大的协作沟通、自动化流程追踪和合并策略的选择能力。用户对于一个 pull request 的响应并不是要么接受要么拒绝的布尔型，也不是一旦接到请求就必须立即作出决定。实际上，在一个分支刚建立起时就发起 pull request 请求，然后令这个请求在整个分支的生命周期内保持待决状态是很常见的做法，此时的 pull request 就是一个自动化流程追踪系统。在一个 pull request 中，用户可以使用 「@提及系统」来提及一个希望收到明确请求的对象（这个对象既可以是用户也可以是组织中的团队）；还可以在这个 pull request 下与其他协作者沟通，甚至附上 emoji 和图片；也可以选择继续提交新的 commit，直到大家达成共识（或者做出妥协）；最后，具有写仓库权限的协作者可以 merge 这个 pull request，通过依次执行 merge pull request 和 confirm merge 操作将其并入目标分支。
+除此之外，pull request 机制本身提供了强大的协作沟通、自动化流程追踪和合并策略的选择能力。用户对于一个 pull request 的响应并不是要么接受要么拒绝的布尔型，也不是一旦接到请求就必须立即作出决定。实际上，在一个分支刚建立起时就发起 pull request 请求，然后令这个请求在整个分支的生命周期内保持待决状态是很常见的做法，此时的 pull request 就是一个自动化流程追踪系统。在一个 pull request 中，用户可以使用 「@ 提及系统」来提及一个希望收到明确请求的对象（这个对象既可以是用户也可以是组织中的团队）；还可以在这个 pull request 下与其他协作者沟通，甚至附上 emoji 和图片；也可以选择继续提交新的 commit，直到大家达成共识（或者做出妥协）；最后，具有写仓库权限的协作者可以 merge 这个 pull request，通过依次执行 merge pull request 和 confirm merge 操作将其并入目标分支。
 
 在共享仓库模式中，pull request 通常用于发起 review 请求，然后将一个分支并入另一个分支——虽然发起者本身就具有直接 push 和 merge 的权限，但作为协作流程的一部分，在合并分支之前通过 pull request 知会他人、接受 review 并征求他人意见，往小了说是对其他团队成员的尊重，往大了说这关系到生产安全。
 
@@ -293,14 +293,39 @@ Pull request 是 GitHub 的杀手功能之一，单从 Git 的角度来讲，pul
 
 ### 排除文件
 
+在使用 Git 系统时，我们可能不希望本地的一些元数据、缩略图、编译或运行结果等被纳入 Git 的版本控制范围内，原因包括但不限于：
+  - Git 化这些内容没有意义，可能会增加不必要的计算和 I/O 资源开销甚至影响系统性能；
+  - 在使用公共（公开的）仓库时，不希望某些内容被公开访问；
+  - 在不同 Git 终端间交换这些内容可能会带来一些麻烦——比如造成兼容性问题或者对其他协作者产生困扰。
+
+
+
 #### 针对仓库排除
 
-#### 针对本地仓库副本排除
+针对仓库排除是指在这个仓库的任何副本（包括 clone 副本和 fork 副本）中排除，这种排除方式的工作原理是：当有新文件被纳入某次 commit 时，Git 程序会检查仓库根目录下的 .gitignore 文件，并根据文件中的排除条目列表执行排除；但默认情况下，.gitignore 文件本身不会被排除，因此：
+  - .gitignore 文件会随仓库的 clone/fork 跟随仓库被传递到新的仓库副本，因此整个仓库的所有副本都会共享这份排除列表；
+  - 被排除文件的目录/文件名本身是随仓库的公开而公开的，因此这种排除方法不能用于隐藏不希望被公开的内容的目录/文件名。
+
+.gitignore 文件是一个纯文本文件，因此你可以使用 touch 命令创建它、使用任何文本编辑器修改它，.gitignore 的内容格式非常简单——
+  - `#` 表示注释的开始，它的作用范围直到所在行的结束；
+  - 一行记录一个目录或文件条目；
+  - 允许使用 `*` 和 `?` 表示通配。
+
+这里有一份半官方的[常用 .gitignore 配置](https://gist.github.com/octocat/9257657) Gist（Gist 是 GitHub 的又一产品，可以看作是 GitHub List 的合成词，这里不做进一步介绍）作为示例。
+
+GitHub 针对各种主流的软件开发环境维护了一个官方的 [.gitignore 实用模版集](https://github.com/github/gitignore)。
+
+除此之外，你可以使用 [gitignore.io](https://www.gitignore.io) 来根据自己的操作系统、软件环境、编程语言、IDE 等实际情况客制化一份专属的 .gitignore 文件。
+
+需要注意的是，Git 程序在执行 commit 时，只针对新文件进行 .gitignore 检查，也就是说：一旦某个文件已经被捡入（checked in，建立跟踪），Git 程序将不会再遵循 .gitignore 文件中的规则排除已有文件，该已有文件会被正常纳入 commit。因此，如果希望在 .gitignore 文件被建立/修改后剔除「已被捡入却希望被排除的文件」，可以使用 git 命令：  
+`$ git rm --cached [filename]`
 
 #### 本地全局排除
+
+#### 针对本地仓库副本排除
 
 ### 与同步网盘配合使用
 
 （未完待续，在现有标题的内容被补全后，本文即转入随缘更新状态，笔者将看心情更新 GitHub 的进阶使用方法）
 
-（最后更新于 2019-11-19）
+（最后更新于 2019-11-23）

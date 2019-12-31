@@ -8,11 +8,13 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-# title: 
+# title:
 ---
+
+Welcome to Telly Lab
+
+HAPPY NEW YEAR 2020
 
 欢迎光临 Telly Lab
 
-这里正在装修，到处都是死胡同。
-
-过些时日再来，也许会装好。
+2020 新年快乐！

@@ -34,7 +34,7 @@ google_analytics: UA-151164894-1
 header_pages:
   - about/index.md
   - about/about-zh.md
-  
+
 minima:
   # Minima date format
   # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -54,13 +54,8 @@ plugins:
   - jekyll-sitemap
 
 # Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
 exclude:
   - .sass-cache/
   - .jekyll-cache/

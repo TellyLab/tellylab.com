@@ -13,8 +13,8 @@ layout: home
 
 Welcome to Telly Lab
 
-HAPPY NEW YEAR 2020
+Happy Chinese New Year and wish no more 2019-nCoV!
 
 欢迎光临 Telly Lab
 
-2020 新年快乐！
+新春快乐 远离病毒

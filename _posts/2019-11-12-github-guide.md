@@ -4,6 +4,7 @@ title: GitHub 不完全指南
 author: Telly Chen 陈天傲
 categories: [blog]
 tags: [git, github, workflow]
+modified_date: 2019-12-09
 ---
 
 我们常说的 GitHub 是指 GitHub, Inc.，一家位于美国的私人公司，于 2018 年被 Microsoft Corporation 收购。其持有 [GitHub.com](https://GitHub.com) 域名（域名是大小写不敏感的），但不以此为唯一对外开展业务的域名。
@@ -370,8 +371,3 @@ Git 需要 commit 而不能自动记录单个文件及目录结构的历史版�
  - 为操作系统配置完全内存转储（恢复成本高，不适用于一般应用）；
  - 为 RAM 提供冗余的持续刷新能力（实现成本高，不适用于一般应用）；
  - 为硬件提升可靠性（包括但不限于使用冗余硬件、冗余电源；其中通过 UPS 为台式电脑提供尽可能不间断的外部电源是一种成本适中且易于部署的做法）。
-
----
-（本文已转入维护阶段，作者可能随缘更新 GitHub 的进阶使用方法）
-
-最后更新于 2019-12-09

@@ -13,8 +13,8 @@ layout: home
 
 Welcome to Telly Lab
 
-Happy Chinese New Year and wish no more 2019-nCoV!
+Wish no more Novel Coronavirus Pneumonia.
 
 欢迎光临 Telly Lab
 
-新春快乐 远离病毒
+愿瘟疫不再。

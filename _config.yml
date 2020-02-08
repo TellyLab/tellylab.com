@@ -18,15 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Telly Lab 科技杂货铺
-author: TellyLab.com
-email: chentianao@gmail.com
+author:
+  name: TellyLab.com
+  email: chentianao@gmail.com
 description: >- # this means to ignore newlines until "show_excerpts:"
   Anything about technology, and so on. 一个科技杂货铺，啥都往里堆。
 show_excerpts: false # set to true to show excerpts on the homepage
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tellylab.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title
-copyright: Copyright © <!--copyyears--> <!--author-->
+timezone: Etc/UTC
 google_analytics: UA-151164894-1
 
 # If you want to link only specific pages in your header, uncomment

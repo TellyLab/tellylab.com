@@ -7,17 +7,14 @@
         <p>{{- site.description | escape -}}</p>
         {%- include social.html -%}
 
-        {%- if site.email -%}
-          <p><center><a class="grey" href="mailto:{{ site.email }}">{{ site.email }}</a></center></p>
+        {%- if site.author.email -%}
+          <p><center><a class="grey" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></center></p>
         {%- endif -%}
 
-        {%- if site.copyright -%}
-          {% assign year_string = site.time | date: '%Y' %}
-          <center><small>
-            {{ site.copyright | markdownify | replace:'<!--copyyears-->',year_string | replace:'<!--author-->',site.author | replace:'<p>','' | replace:'</p>','' }}
-          </small></center>
-        {%- endif -%}
-        
+        <center><small>
+          Copyright © {{ site.time | date: '%Y' }} {{ site.author.name }}
+        </small></center>
+
       </div>
     </div>
   </div>

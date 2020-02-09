@@ -1,0 +1,16 @@
+---
+layout: home
+---
+
+{{ content }}
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script>
+  var url = "/assets/today/";
+  url += new Date().getDay();
+  url += ".html";
+  $(function(){
+    $("#includedContent").load(url);
+  });
+</script>
+<div id="includedContent"></div>

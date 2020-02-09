@@ -28,6 +28,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tellylab.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title
 timezone: Etc/UTC
+defaults:
+  -
+    scope:
+      path: "assets/today" # an empty string here means all files in the project
+    values:
+      layout: "none"
+
 google_analytics: UA-151164894-1
 
 # If you want to link only specific pages in your header, uncomment

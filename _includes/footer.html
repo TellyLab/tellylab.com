@@ -1,21 +1,22 @@
 <footer class="site-footer h-card">
-  <data href="{{ "/" | relative_url }}"></data>
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
   <div class="wrapper">
     <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <h2 class="footer-heading">{{ site.title | escape }}</h2>
-        <p>{{- site.description | escape -}}</p>
-        {%- include social.html -%}
-
-        {%- if site.author.email -%}
-          <p><center><a class="grey" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></center></p>
-        {%- endif -%}
-
-        <center><small>
-          Copyright © {{ site.time | date: '%Y' }} {{ site.author.name }}
-        </small></center>
-
-      </div>
+      <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    </div>
+    <div class="footer-col-wrapper">
+      <p class="footer-col">
+        Anything about technology, and so on.<br />
+        一个科技杂货铺，啥都往里堆。
+      </p>
+      <p class="footer-col">
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><br />
+        <a href="https://github.com/TellyLab">GitHub.com/TellyLab</a><br />
+        <a href="feed.xml">Atom (RSS-like) Feed</a>
+      </p>
     </div>
   </div>
+  <center class="social-links"><small>
+    Copyright © {{ site.time | date: '%Y' }} {{ site.author.name }}
+  </small></center>
 </footer>

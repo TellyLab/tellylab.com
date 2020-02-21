@@ -7,8 +7,19 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: index
+layout: home
 ---
 
-Welcome to Telly Lab, and **wish no more Novel Coronavirus Pneumonia**.  
-欢迎光临 Telly Lab，**愿瘟疫不再**。
+Welcome to TellyLab, and **wish no more Novel Coronavirus Pneumonia**.  
+欢迎光临 TellyLab，**愿瘟疫不再**。
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script>
+  var url = "/assets/today/";
+  url += new Date().getDay();
+  url += ".html";
+  $(function(){
+    $("#includedContent").load(url);
+  });
+</script>
+<div id="includedContent"></div>

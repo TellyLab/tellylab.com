@@ -37,12 +37,6 @@ defaults:
 
 google_analytics: UA-151164894-1
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-header_pages:
-  - about/index.md
-  - about/about-zh.md
-
 # Build settings
 markdown: kramdown
 remote_theme: jekyll/minima

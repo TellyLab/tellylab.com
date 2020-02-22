@@ -10,16 +10,9 @@
 layout: home
 ---
 
-Welcome to TellyLab, and **wish no more Novel Coronavirus Pneumonia**.  
+Welcome to TellyLab, and **wish no more COVID-19**.  
 欢迎光临 TellyLab，**愿瘟疫不再**。
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script>
-  var url = "/assets/today/";
-  url += new Date().getDay();
-  url += ".html";
-  $(function(){
-    $("#includedContent").load(url);
-  });
-</script>
+<script>$(function(){$("#includedContent").load("/assets/today/"+new Date().getDay());});</script>
 <div id="includedContent"></div>

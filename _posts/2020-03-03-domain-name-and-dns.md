@@ -1,6 +1,6 @@
 ---
 title: 域名与 DNS
-author: Telly Chen 陈天傲
+author: 陈天傲
 ---
 
 **域名**即 **domain name**，也译作网域名称。

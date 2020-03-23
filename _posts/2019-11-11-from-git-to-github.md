@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 从 Git 到 GitHub
-author: Telly Chen 陈天傲
+author: 陈天傲
 categories: [blog]
 tags: [git, github, workflow]
 ---

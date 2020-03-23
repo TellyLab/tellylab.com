@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Hello, Again
-author: Telly Chen 陈天傲
+author: 陈天傲
 categories: [blog]
 tags: [tellylab.com, misc, life]
 ---
 
 Hello, again.
 
-这里是 Telly Lab，天傲的个人杂货铺。这是一次时隔四年的重启。
+这里是 TellyLab，天傲的个人杂货铺。这是一次时隔四年的重启。
 
 2015 年 2 月，我在 DigitalOcean 的主机上搭建了个人的第一个独立博客。促使我做这件事的直接原因是我当时一定要拥有一台属于自己的远程主机，而令我做下一定要拥有一台主机的决定的原因有三：
 

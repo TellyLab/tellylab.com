@@ -4,12 +4,12 @@ title: GitHub 不完全指南
 author: 陈天傲
 categories: [blog]
 tags: [git, github, workflow]
-modified_date: 2019-12-09
+modified_date: 2020-03-26
 ---
 
 我们常说的 GitHub 是指 GitHub, Inc.，一家位于美国的私人公司，于 2018 年被 Microsoft Corporation 收购。其持有 [GitHub.com](https://GitHub.com) 域名（域名是大小写不敏感的），但不以此为唯一对外开展业务的域名。
 
-GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），其中最为大众所熟知且常用的就是位于 GitHub.com 的完全 Git 托管服务。因此，我们常说的 GitHub 特指 GitHub.com。
+GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），其中最为大众所熟知且常用的就是位于 GitHub.com 的完全 Git 托管服务。因此，我们常说的 GitHub 特指 GitHub.com。GitHub 官方也常用「GitHub.com」代指「GitHub.com 的 web 界面」。
 
 以下是关于 GitHub 的**不完全**指南。
 
@@ -17,17 +17,19 @@ GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），其中
 
 在注册 GitHub 账户时，需要选择一个 GitHub 账户计划。
 
-根据 [GitHub 官方说法](https://help.github.com/en/github/getting-started-with-github/githubs-products)，GitHub（特指 GitHub.com）有多种产品，其实就是 GitHub.com 的不同账户计划。按照用途可以分为个人计划和团队计划，目前个人计划分为免费计划和每月 7 刀的专业计划，免费计划可以几乎无条件但有限制地使用。
+根据 [GitHub 官方说法](https://help.github.com/en/github/getting-started-with-github/githubs-products)，GitHub（此处特指 GitHub.com）有多种产品，其实就是 GitHub.com 的不同账户计划。按照用途可以分为个人计划和团队计划，目前个人计划分为免费计划和每月 7 刀的专业计划，免费计划可以几乎无条件但有限制地使用。
 
 除了以上提到的几种账户类型外，GitHub 还有一个组织（organization）的概念。组织像其他用户账户一样，拥有仓库（repositories）、项目（projects）、包（packages），也拥有和其他账户统一的用户名命名空间（也就是说组织名和用户名不能重复），此外还拥有一个和个人帐户不太一样的门户页（例如[本站的门户页](https://github.com/Tianao)）。但组织不被视为一个账户，组织不能直接注册，亦不能直接使用组织名登录到 GitHub。想要使用组织身份，需要首先拥有一个普通账户，然后通过普通账户新建组织。在新建组织时，需要选择一个团队计划，GitHub 对于开源团队使用的团队计划是免费的。
 
-使用组织有很多好处，即使是在规模不大的团队中，也可以体会到组织在去中心化和权限管理方面的优势，从而让一个团队真正以组织的模式运行——这是 GitHub 基于 Git 而高于 Git 的地方之一，也是笔者在[从 Git 到 GitHub](/from-git-to-github.html) 中提到的基于 Git 的 SaaS 的增值服务部分。
+使用组织有很多好处，即使是在规模不大的团队中，也可以体会到组织在去中心化和权限管理方面的优势，从而让一个团队真正以组织的模式运行——这是 GitHub 基于 Git 而高于 Git 的地方之一，也是笔者在[从 Git 到 GitHub](/from-git-to-github) 中提到的基于 Git 的 SaaS 的增值服务部分。
 
 ## Hello World
 
-Hello World 是一个计算机编程的经典入门项目。在 GitHub，同样有一篇名为 [Hello World](https://guides.github.com/activities/hello-world/) 的入门指南。
+Hello World 是一个计算机编程的经典入门项目。在 GitHub，同样有一篇名为 [Hello World](https://guides.github.com/activities/hello-world) 的官方入门指南。
 
-但由于正在阅读的本文是一篇不完全指南，笔者不会逐句翻译这篇官方指南。
+2020-03-26 附言：GitHub 最近完善了他们年久失更的[官方指南合集](https://guides.github.com)。
+
+但由于正在阅读的本文是一篇不完全指南，笔者不会逐句翻译上述这些官方指南。
 
 ## 访问 GitHub 仓库与执行基本操作
 
@@ -371,3 +373,58 @@ Git 需要 commit 而不能自动记录单个文件及目录结构的历史版�
  - 为操作系统配置完全内存转储（恢复成本高，不适用于一般应用）；
  - 为 RAM 提供冗余的持续刷新能力（实现成本高，不适用于一般应用）；
  - 为硬件提升可靠性（包括但不限于使用冗余硬件、冗余电源；其中通过 UPS 为台式电脑提供尽可能不间断的外部电源是一种成本适中且易于部署的做法）。
+
+### Commit 签名
+
+Git 支持通过对 commit 签名来证实单次 commit 的来源可信。
+
+具体来讲，Git 通过在执行 commit 操作时在 commit 记录中附带对 commit 内容的签名（signature）实现对某次 commit 的签名（sign），而签名机制本身保证了只有持有「某个公钥所对应的私钥」才能生成「可被这个公钥验证的签名」。进一步，commit 的签名可以证实该 commit 是由签名所对应的私钥持有者生成的。
+
+Git 程序本身不包含能够执行签名的可执行文件或程序代码，Git 需要在执行 commit 时调用环境中的第三方程序来执行签名，签名的细节也取决于该第三方调用。Git 支持的签名方式有 GPG 和 S/MIME。关于签名的工作原理和技术细节，以后有空细说。
+
+Git 程序默认不对 commit 签名，除非命令或配置参数中明确要求。
+
+本不完全指南以使用 GPG 签名为例，简单介绍 commit 签名相关事宜。
+
+#### 配置本地 GPG 环境
+
+Git 程序在为 commit 签名时将直接调用本地 GPG 环境，配置基本 GPG 环境的思路如下：
+
+1. 安装 OpenPGP 兼容程序，通常是 GnuPG（也就是 GPG），并确保可以被正确调用；
+
+2. 检查已经存在的 GPG 密钥对或者生成新的密钥对，并确保与密钥关联的 Name 和 Email 字段信息与用于 commit 的一致。
+
+#### 使用 git 命令对单次 Commit 签名
+
+在使用 git 命令执行 commit 操作时使用 `-S` 明确要求对当次 commit 签名，如：  
+`git commit -S -m "commit-message"`
+
+#### 配置 Git 环境实现默认签名
+
+Git 程序通过读取 Git 环境配置决定是否默认签名，配置 Git 环境参数可以实现默认签名。这将影响「直接使用 git 命令」和「使用 Atom 等应用调用系统 Git」执行 commit 时的表现，但是不会影响 GitHub Desktop 的表现，因为后者使用自己的 Git 实现。
+
+配置本地仓库副本：  
+`git config commit.gpgsign true`
+
+配置本地全局：  
+`git config --global commit.gpgsign true`
+
+仓库配置的优先级高于全局配置，出现冲突时以前者为准。
+
+#### 为 GitHub 账户添加 GPG 公钥
+
+签名的意义在于被验证，GitHub 使用 OpenPGP 库和用户添加到其 GitHub 账户的公钥验证用户在本地签名的 commit。将 GPG 公钥添加到 GitHub 账户可将公钥和账户关联，从而实现 GitHub 对 commit 签名的自动验证并在 GitHub.com 上显示签名状态。
+
+关于如何将 GPG 公钥添加到 GitHub 账户请移步该 [GitHub 官方帮助](https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account)。
+
+更多关于 commit 签名验证请移步该 [GitHub 官方帮助](https://help.github.com/en/github/authenticating-to-github/about-commit-signature-verification)。
+
+#### 关于在 GitHub.com 上创建的 Commit
+
+常规仓库操作在 GitHub.com 上创建的 commit 都将被自动使用 GitHub 的共享私钥签名，用户无法选择也无需干预。作为例外，某些在 GitHub.com 上触发的的自动化逻辑造成的 commit 不会被自动签名，并且笔者目前没有发现解决办法。
+
+共享私钥由 GitHub 管理和保密，仅用于对「用户在 GitHub.com 上创建的 commit」签名，用户无法访问该私钥。
+
+这个私钥生成的签名可以且仅可以证实「某个 commit 是在 GitHub.com 上创建的」，至于在 GitHub.com 上创建这个 commit 的究竟是否是 commit（的 metadata）中所声称的用户，这个问题由 GitHub.com 的账户和认证系统负责。
+
+这个账户和认证系统同时用于保护「用户自己的 GPG 公钥的上传/发布」和「GPG 公钥与用户身份的绑定」。因此，理论上在 GitHub.com 上，「GitHub 使用其共享私钥生成的签名」和「用户使用其独立私钥生成的签名」有效性是一样的。

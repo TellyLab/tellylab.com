@@ -60,8 +60,8 @@ Anyway，对于 Git 和分布式，笔者的个人看法是：
 
 既然使用中心化的 Git 服务器来方便协作是合理的，那么在这个云时代，Git 当然也要上云。云主机和云平台还不够彻底，要云就云应用，因此有了基于 Git 的 SaaS（Software as a Service）——我们管这个叫 Git 托管。（至于什么是 SaaS，其实是个科技以换名为本的故事，以后有机会再聊。）
 
-Git 托管的本质就是全权的 Git repository 托管，同时顺带提供身份验证、访问控制、审计、自动化部署、云端发布等必要和/或增值服务。
+Git 托管的本质就是全权的 Git repository 托管，同时顺带提供身份验证、访问控制、审计、自动化流程、CI/CD 等必要/增值服务。
 
-基于 Git 的 SaaS 服务商有很多，比如数据库翻车直播恢复的 GitLab、SVN 起家主打私有库的 Bitbucket、曾用名「码云」的 Gitee、Git/SVN 双修的 CODING，但最最最著名的，还是几乎成为了 Git 的代名词的 GitHub。
+基于 Git 的 SaaS 服务商有很多，比如数据库翻车直播恢复的 GitLab、SVN 起家主打私有库的 Bitbucket、曾用名「码云」的 Gitee、Git/SVN 双修的 CODING，但最最最著名的，还是几乎成为了 Git 服务的代名词的 GitHub。
 
-关于 GitHub，请看 [GitHub 不完全指南](/github-guide.html)。
+关于 GitHub 及其相关应用，请看 [GitHub 不完全指南](/github-guide)。

@@ -20,7 +20,6 @@
 title: TellyLab 科技杂货铺
 author:
   name: TellyLab.com
-  email: chentianao@gmail.com
 description: >- # this means to ignore newlines until "show_excerpts:"
   Anything about technology.
 show_excerpts: false # set to true to show excerpts on the homepage
@@ -28,7 +27,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tellylab.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title
 timezone: Etc/UTC
-google_analytics: UA-151164894-1
 
 # Build settings
 markdown: kramdown

@@ -61,3 +61,5 @@ OVF 证书通过对 OVF 清单文件签名实现对整个 OVF 包的签名，而
 此时，修改后的 OVF 描述文件已可直接导入 VirtualBox，VirtualBox 会在同路径下自动找到关联的其他文件。
 
 如果你希望将这些文件再次打包为 OVA 文件，则需遵循 OVF 规范，这里不再赘述。
+
+{% include responsive.html %}

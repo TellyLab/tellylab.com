@@ -1,9 +1,6 @@
 ---
-layout: post
 title: Hello, Again
 author: 陈天傲
-categories: [blog]
-tags: [tellylab.com, misc, life]
 ---
 
 Hello, again.

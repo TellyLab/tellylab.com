@@ -1,9 +1,6 @@
 ---
-layout: post
 title: 从 Git 到 GitHub
 author: 陈天傲
-categories: [blog]
-tags: [git, github, workflow]
 ---
 
 笔者本来想直接写一篇 GitHub 不完全指南，但总觉得要说 GitHub 还是要从 Git 说起。
@@ -65,3 +62,5 @@ Git 托管的本质就是全权的 Git repository 托管，同时顺带提供身
 基于 Git 的 SaaS 服务商有很多，比如数据库翻车直播恢复的 GitLab、SVN 起家主打私有库的 Bitbucket、曾用名「码云」的 Gitee、Git/SVN 双修的 CODING，但最最最著名的，还是几乎成为了 Git 服务的代名词的 GitHub。
 
 关于 GitHub 及其相关应用，请看 [GitHub 不完全指南](/github-guide)。
+
+{% include responsive.html %}

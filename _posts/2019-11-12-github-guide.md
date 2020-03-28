@@ -240,6 +240,18 @@ GitHub Training 有一份 Git 速查 PDF，名为 [Git Cheat Sheet](https://gith
 `$ git reset --hard [commit]`  
 将 commit 历史撤销到指定 commit 后的状态，同时对本地工作目录的内容进行回滚（请注意，这是一条危险命令，一旦误操作，git 本身不提供任何反回滚能力；如有必要，则需考虑使用文本编辑器/IDE 的撤销功能或独立于 Git 的文件备份/快照/版本管理功能进行挽回；如果针对整个本地仓库副本所在的目录进行回滚，则可能会因 commit 记录随之回滚而令问题变得更加复杂，在执行此类操作前请确保你对 Git 的工作原理足够熟悉）。
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- In-post -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8312372071833405"
+     data-ad-slot="3652641413"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## 理解 GitHub 工作流
 
 Git 尤其是 GitHub 的核心在于协作，在了解基本操作后，理解 GitHub 的工作流是快速上手 GitHub 多人协作项目的极佳方式。在 GitHub，有一篇名为 [Understanding the GitHub flow](https://guides.github.com/introduction/flow/) 的官方指南，同样，笔者不会翻译。
@@ -292,6 +304,18 @@ Pull request 是 GitHub 的杀手功能之一，单从 Git 的角度来讲，pul
 
 在大型或关键生产项目中，通过单元测试的分支往往还要被并入集成测试/系统测试/验收测试等分支进行最终测试，因此在通过最终测试前，不应将其他分支并入 master 分支（这一点在刚才已经说过了）。而如果某个分支没有通过某次测试，则应当根据 commit 记录进行回滚，然后持续修改分支、并入测试分支，直到通过测试。对于已经被并入测试分支且通过测试的分支、已经通过最终测试并被并入 master 的分支，他们的生命周期便可以（但不必须）结束了。除非要进行持续交付，否则可以安全地删除已被合并入其他分支的分支——这种状态下的分支被称为头分支，GitHub 提供了自动删除头分支的功能，这个功能默认关闭，针对特定仓库开启这个功能的路径是：仓库页 - Settings - Options - Automatically delete head branches. 被 GitHub 自动删除的分支是可以被恢复的，恢复入口之一在：仓库页 - Pull requests.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- In-post -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8312372071833405"
+     data-ad-slot="3652641413"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## GitHub 进阶使用
 
 ### 排除文件
@@ -340,6 +364,18 @@ Git 会自动忽略 *.gitignore* 中不存在的条目，因此使用通用模�
 
 这个存储排除规则的配置文件理论上可以存在于/存放于任何地方（包括已经被挂载为卷的远程目录/网络硬盘；只要 Git 程序对其有读权限）；同时它不归属于任何仓库（除非其文件本身位于某个仓库的工作目录并已被 Git 程序检入），因此也不会被任何仓库检入而纳入版本控制范围或被同步/push/上载至（位于远程的）其它仓库副本。
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- In-post -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8312372071833405"
+     data-ad-slot="3652641413"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ### GitHub 与存储安全
 
 #### GitHub 为什么不能代替同步和备份等存储安全手段
@@ -373,6 +409,18 @@ Git 需要 commit 而不能自动记录单个文件及目录结构的历史版�
  - 为操作系统配置完全内存转储（恢复成本高，不适用于一般应用）；
  - 为 RAM 提供冗余的持续刷新能力（实现成本高，不适用于一般应用）；
  - 为硬件提升可靠性（包括但不限于使用冗余硬件、冗余电源；其中通过 UPS 为台式电脑提供尽可能不间断的外部电源是一种成本适中且易于部署的做法）。
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- In-post -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8312372071833405"
+     data-ad-slot="3652641413"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 ### Commit 签名
 
@@ -428,3 +476,15 @@ Git 程序通过读取 Git 环境配置决定是否默认签名，配置 Git 环
 这个私钥生成的签名可以且仅可以证实「某个 commit 是在 GitHub.com 上创建的」，至于在 GitHub.com 上创建这个 commit 的究竟是否是 commit（的 metadata）中所声称的用户，这个问题由 GitHub.com 的账户和认证系统负责。
 
 这个账户和认证系统同时用于保护「用户自己的 GPG 公钥的上传/发布」和「GPG 公钥与用户身份的绑定」。因此，理论上在 GitHub.com 上，「GitHub 使用其共享私钥生成的签名」和「用户使用其独立私钥生成的签名」有效性是一样的。
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Page-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8312372071833405"
+     data-ad-slot="1050722328"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

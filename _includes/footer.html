@@ -1,5 +1,5 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <data class="u-url" href="/"></data>
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col">
@@ -8,13 +8,13 @@
         一个科技杂货铺，啥都往里堆。
       </div>
       <div class="footer-col">
-        <a href="{{ "feed.xml" | relative_url }}">Atom (RSS-like) Feed</a><br />
+        <a href="/feed.xml">Atom (RSS-like) Feed</a><br />
         <a href="https://github.com/TellyLab">GitHub.com/TellyLab</a><br />
         <a href="mailto:chentianao@gmail.com">chentianao@gmail.com</a>
       </div>
     </div>
   </div>
-  <div class="social-links" style="text-align:center;">
-    <small>Copyright © {{ site.time | date: '%Y' }} {{ site.author.name }}</small>
+  <div style="display: flex; justify-content: center; font-size: 0.75rem; color: #86868b">
+    Copyright © {{ site.time | date: "%Y" }} TellyLab.com
   </div>
 </footer>

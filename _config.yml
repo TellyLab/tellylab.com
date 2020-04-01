@@ -27,8 +27,7 @@ permalink: /:title
 timezone: Etc/UTC
 
 # Build settings
-markdown: kramdown
-remote_theme: jekyll/minima
+theme: minima
 plugins:
   - jekyll-seo-tag
   - jekyll-feed

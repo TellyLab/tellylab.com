@@ -7,11 +7,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+layout: default
 ---
 
 <p>Welcome to TellyLab</p>
 
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script>$(function(){$("#today").load("/assets/today/"+new Date().getDay());});</script>
-<div id="today"></div>
+{% include today.html %}
+{% include post-list.html %}

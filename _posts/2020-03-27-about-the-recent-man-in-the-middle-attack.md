@@ -24,4 +24,4 @@ modified_date: 2020-03-28
 
 笔者不知道发生了什么，no news is good news.
 
-{% include responsive.html %}
+{% include ad.html %}

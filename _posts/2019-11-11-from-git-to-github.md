@@ -63,4 +63,4 @@ Git 托管的本质就是全权的 Git repository 托管，同时顺带提供身
 
 关于 GitHub 及其相关应用，请看 [GitHub 不完全指南](/github-guide)。
 
-{% include responsive.html %}
+{% include ad.html %}

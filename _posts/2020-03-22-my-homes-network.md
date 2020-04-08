@@ -51,7 +51,7 @@ author: 陈天傲
 
 目前，笔者家安装了三个暗盒面板 AP，全部使用 PoE 供电。
 
-{% include responsive.html %}
+{% include ad.html %}
 
 ## 设备选型
 
@@ -87,7 +87,7 @@ author: 陈天傲
 
 最最最搞笑的是，它真的是一个路由器！一个 5 GE 口且支持 .1Q 子接口的路由器，一个支持 RIPv2 和 RIPng 的路由器！和 IOS 的 ip routing 命令类似，可选启用 VLAN 间路由，否则只执行默认路由。对，没错，这玩意不是 IOS 的，不然就成买 IOS 送机器了。
 
-{% include responsive.html %}
+{% include ad.html %}
 
 ## 网络架构
 
@@ -154,4 +154,4 @@ AP 管理网络不提供任何路由，没有和其他网络的域间路由能�
 
 IPTV 盒子位于客厅电视柜，由跳线连接到客厅电视墙 AP 正面的一个接入口，以此将流量送入 IPTV VLAN，为 IPTV 盒子提供到光猫 iTV 接口的透明二层桥。
 
-{% include responsive.html %}
+{% include ad.html %}

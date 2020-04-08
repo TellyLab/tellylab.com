@@ -62,4 +62,4 @@ OVF 证书通过对 OVF 清单文件签名实现对整个 OVF 包的签名，而
 
 如果你希望将这些文件再次打包为 OVA 文件，则需遵循 OVF 规范，这里不再赘述。
 
-{% include responsive.html %}
+{% include ad.html %}

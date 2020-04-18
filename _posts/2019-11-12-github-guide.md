@@ -24,9 +24,13 @@ GitHub 账户分为「个人用户账户」、「组织账户」和「企业账�
 
 用户账户往往代表一个自然人，在需要时也可以代表一个机器人（例如用于 CI/CD 的自动化程序）。一个用户帐户可以是零个到多个组织的成员，就像现实中一个人可能同时归属于多个组织。
 
-组织账户用于代表一个组织，组织的所有者往往是用户账户，一个组织可以拥有多个所有者，多个所有者之间是平等的。组织像个人用户一样，拥有仓库（repositories）、项目（projects）、包（packages），也拥有和其他账户统一的账户名命名空间（也就是说组织账户的组织名和用户账户的用户名不能重复），此外还拥有一个和个人用户不太一样的门户页（如 [TellyLab 的门户页](https://github.com/TellyLab)）。组织不能直接注册，亦不能直接使用组织名登录到 GitHub。想要使用组织身份——也就是注册组织账户，需要首先拥有一个用户账户，然后通过用户账户新建组织。在新建组织时，也需要选择一个定价计划，Free 计划同样适用于组织。
+组织账户用于代表一个组织，组织的所有者往往是用户账户，一个组织可以拥有多个所有者，多个所有者之间是平等的。组织像个人用户一样，拥有仓库（repositories）、项目（projects）、包（packages），也拥有和其他账户统一的账户名命名空间（也就是说组织账户的组织名和用户账户的用户名不能重复），此外还拥有一个和个人用户不太一样的门户页（如 [TellyLab 的门户页](https://github.com/TellyLab)）。
 
-使用组织有很多好处，即使是在规模不大的团队中，也可以体会到组织在去中心化和权限管理方面的优势，从而让一个团队真正以组织的模式运行——这是 GitHub 基于 Git 而高于 Git 的地方之一，也是笔者在[从 Git 到 GitHub](/from-git-to-github) 中提到的基于 Git 的 SaaS 的增值服务部分。
+组织账户不能直接注册，用户亦不能直接使用组织名登录到 GitHub。想要使用组织身份——也就是注册组织账户，需要首先拥有一个用户账户，然后通过用户账户新建组织。在新建组织时，也需要选择一个定价计划，Free 计划同样适用于组织。
+
+使用组织账户有很多好处，即使是在规模不大的团队中，也可以体会到组织在去中心化和权限管理方面的优势，从而让一个团队真正以组织的模式运行——这是 GitHub 基于 Git 而高于 Git 的地方之一，也是笔者在[从 Git 到 GitHub](/from-git-to-github) 中提到的基于 Git 的 SaaS 的增值服务部分。
+
+更多关于 GitHub 账户的类型，请移步[此官方帮助](https://help.github.com/en/github/getting-started-with-github/types-of-github-accounts)。
 
 ## Hello World
 
@@ -428,9 +432,9 @@ Git 程序通过读取 Git 环境配置决定是否默认签名，配置 Git 环
 
 签名的意义在于被验证，GitHub 使用 OpenPGP 库和用户添加到其 GitHub 账户的公钥验证用户在本地签名的 commit。将 GPG 公钥添加到 GitHub 账户可将公钥和账户关联，从而实现 GitHub 对 commit 签名的自动验证并在 GitHub.com 上显示签名状态。
 
-关于如何将 GPG 公钥添加到 GitHub 账户请移步[该 GitHub 官方帮助](https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account)。
+关于如何将 GPG 公钥添加到 GitHub 账户请移步[此官方帮助](https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account)。
 
-更多关于 commit 签名验证请移步[该 GitHub 官方帮助](https://help.github.com/en/github/authenticating-to-github/about-commit-signature-verification)。
+更多关于 commit 签名验证请移步[此官方帮助](https://help.github.com/en/github/authenticating-to-github/about-commit-signature-verification)。
 
 #### 关于在 GitHub.com 上创建的 Commit
 

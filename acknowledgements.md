@@ -7,11 +7,11 @@ title: Acknowledgements
 
 ## GitHub
 
-本站使用了大量由 [GitHub](https://github.com) 免费提供的服务，在此特别感谢 GitHub。
+本站使用了大量由 [GitHub](https://github.com) 提供的免费产品和服务，在此特别感谢 GitHub。
 
-### GitHub Team For Open Source
+### GitHub Free for organizations
 
-[GitHub Team For Open Source](https://github.com/organizations/plan) 为 TellyLab 提供了组织账户计划并为本站提供开源仓库托管。
+[GitHub Free for organizations](https://github.com/pricing) 为 TellyLab 提供了组织账户计划并为本站提供 Git 仓库托管。
 
 ### GitHub Pages
 [GitHub Pages](https://pages.github.com) 为本站提供了基于容器的自动化构建和站点的静态托管，以此实现本站的 CI/CD。其中，静态托管服务还囊括了 HTTPS 证书的自动化申请/续签、自定义 CNAME 路由和全球 CDN。
@@ -22,7 +22,7 @@ title: Acknowledgements
 
 ## Jekyll
 
-本站的开发和部署环境均使用根据 [MIT 许可证](https://github.com/jekyll/jekyll/blob/master/LICENSE)获得许可的 [Jekyll](https://jekyllrb.com) 从资源文件生成静态站点。
+本站根据 [MIT 许可证](https://github.com/jekyll/jekyll/blob/master/LICENSE)获得许可，在开发和部署环境下使用 [Jekyll](https://jekyllrb.com) 从资源文件生成静态站点。
 
 ## Let's Encrypt
 
@@ -57,6 +57,8 @@ title: Acknowledgements
 本站由 [Google AdSense](https://www.google.com/adsense) 提供赞助商广告。
 
 ## Microsoft
+
+### Microsoft Ajax CDN
 
 本站使用由 [Microsoft Ajax CDN](https://ajax.aspnetcdn.com) 分发的 jQuery 脚本。
 

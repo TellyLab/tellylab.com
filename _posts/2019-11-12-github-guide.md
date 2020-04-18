@@ -1,7 +1,7 @@
 ---
 title: GitHub 不完全指南
 author: 陈天傲
-modified_date: 2020-03-26
+modified_date: 2020-04-17
 ---
 
 我们常说的 GitHub 是指 GitHub, Inc.，一家位于美国的私人公司，于 2018 年被 Microsoft Corporation 收购。其持有 [GitHub.com](https://GitHub.com) 域名（域名是大小写不敏感的），但不以此为唯一对外开展业务的域名。
@@ -12,11 +12,19 @@ GitHub 的主要业务是提供 Git 相关的 SaaS（软件即服务），其中
 
 ## GitHub 账户
 
-在注册 GitHub 账户时，需要选择一个 GitHub 账户计划。
+在注册 GitHub 账户时，需要选择一个[定价计划](https://github.com/pricing)，初次上手可以直接无脑选择 Free。
 
-根据 [GitHub 官方说法](https://help.github.com/en/github/getting-started-with-github/githubs-products)，GitHub（此处特指 GitHub.com）有多种产品，其实就是 GitHub.com 的不同账户计划。按照用途可以分为个人计划和团队计划，目前个人计划分为免费计划和每月 7 刀的专业计划，免费计划可以几乎无条件但有限制地使用。
+### GitHub 的产品
 
-除了以上提到的几种账户类型外，GitHub 还有一个组织（organization）的概念。组织像其他用户账户一样，拥有仓库（repositories）、项目（projects）、包（packages），也拥有和其他账户统一的用户名命名空间（也就是说组织名和用户名不能重复），此外还拥有一个和个人帐户不太一样的门户页（例如[本站的门户页](https://github.com/Tianao)）。但组织不被视为一个账户，组织不能直接注册，亦不能直接使用组织名登录到 GitHub。想要使用组织身份，需要首先拥有一个普通账户，然后通过普通账户新建组织。在新建组织时，需要选择一个团队计划，GitHub 对于开源团队使用的团队计划是免费的。
+GitHub 将不同的价格-功能组合称为不同的产品，关于 GitHub 的产品，详见[此官方帮助](https://help.github.com/en/github/getting-started-with-github/githubs-products)。
+
+### GitHub 账户的类型
+
+GitHub 账户分为「个人用户账户」、「组织账户」和「企业账户」三种类型，只有个人用户账户可以直接注册，组织账户需要通过用户账户账户注册，企业账户需要联系销售团队注册。
+
+用户账户往往代表一个自然人，在需要时也可以代表一个机器人（例如用于 CI/CD 的自动化程序）。一个用户帐户可以是零个到多个组织的成员，就像现实中一个人可能同时归属于多个组织。
+
+组织账户用于代表一个组织，组织的所有者往往是用户账户，一个组织可以拥有多个所有者，多个所有者之间是平等的。组织像个人用户一样，拥有仓库（repositories）、项目（projects）、包（packages），也拥有和其他账户统一的账户名命名空间（也就是说组织账户的组织名和用户账户的用户名不能重复），此外还拥有一个和个人用户不太一样的门户页（如 [TellyLab 的门户页](https://github.com/TellyLab)）。组织不能直接注册，亦不能直接使用组织名登录到 GitHub。想要使用组织身份——也就是注册组织账户，需要首先拥有一个用户账户，然后通过用户账户新建组织。在新建组织时，也需要选择一个定价计划，Free 计划同样适用于组织。
 
 使用组织有很多好处，即使是在规模不大的团队中，也可以体会到组织在去中心化和权限管理方面的优势，从而让一个团队真正以组织的模式运行——这是 GitHub 基于 Git 而高于 Git 的地方之一，也是笔者在[从 Git 到 GitHub](/from-git-to-github) 中提到的基于 Git 的 SaaS 的增值服务部分。
 
@@ -226,7 +234,7 @@ GitHub Training 有一份 Git 速查 PDF，名为 [Git Cheat Sheet](https://gith
 展示指定 commit 记录的元数据（metadata）和内容变化
 
 `$ git add [file]`  
-将指定文件添加到 Git 仓库的版本控制范围内（为新文件建立跟踪），或将指定文件添加到下一次 commit 中（把已跟踪的文件放到暂存区）等（这是一条颇具迷惑性的多功能命令，关于 git add 的更多细节，请看这篇 [Git 官方文档](https://git-scm.com/book/zh/v2/Git-基础-记录每次更新到仓库)）
+将指定文件添加到 Git 仓库的版本控制范围内（为新文件建立跟踪），或将指定文件添加到下一次 commit 中（把已跟踪的文件放到暂存区）等（这是一条颇具迷惑性的多功能命令，关于 git add 的更多细节，请看[这篇 Git 官方文档](https://git-scm.com/book/zh/v2/Git-基础-记录每次更新到仓库)）
 
 `$ git commit -m "[descriptive message]"`  
 执行 commit 操作并记录描述性信息（Commit 摘要）
@@ -241,11 +249,11 @@ GitHub Training 有一份 Git 速查 PDF，名为 [Git Cheat Sheet](https://gith
 
 ## 理解 GitHub 工作流
 
-Git 尤其是 GitHub 的核心在于协作，在了解基本操作后，理解 GitHub 的工作流是快速上手 GitHub 多人协作项目的极佳方式。在 GitHub，有一篇名为 [Understanding the GitHub flow](https://guides.github.com/introduction/flow/) 的官方指南，同样，笔者不会翻译。
+Git 尤其是 GitHub 的核心在于协作，在了解基本操作后，理解 GitHub 的工作流是快速上手 GitHub 多人协作项目的极佳方式。在 GitHub，有一篇名为 [Understanding the GitHub flow](https://guides.github.com/introduction/flow) 的官方指南，同样，笔者不会翻译。
 
 ### 协作模式
 
-通过 GitHub 进行多用户协作时有两种主流的协作模式（collaborative models，实为协作模型，但笔者愿意译作协作模式），但无论是协作模式还是整个工作流都不是固有标准，因此用户可以任意选择、演绎甚至创建协作模式和/或工作流。[GitHub 的官方文档](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-collaborative-development-models)简单介绍了这两种协作模式，同样，笔者不会翻译。
+通过 GitHub 进行多用户协作时有两种主流的协作模式（collaborative models，实为协作模型，但笔者愿意译作协作模式），但无论是协作模式还是整个工作流都不是固有标准，因此用户可以任意选择、演绎甚至创建协作模式和/或工作流。[这篇 GitHub 的官方文档](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-collaborative-development-models)简单介绍了这两种协作模式，同样，笔者不会翻译。
 
 #### 共享仓库模式
 
@@ -420,9 +428,9 @@ Git 程序通过读取 Git 环境配置决定是否默认签名，配置 Git 环
 
 签名的意义在于被验证，GitHub 使用 OpenPGP 库和用户添加到其 GitHub 账户的公钥验证用户在本地签名的 commit。将 GPG 公钥添加到 GitHub 账户可将公钥和账户关联，从而实现 GitHub 对 commit 签名的自动验证并在 GitHub.com 上显示签名状态。
 
-关于如何将 GPG 公钥添加到 GitHub 账户请移步该 [GitHub 官方帮助](https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account)。
+关于如何将 GPG 公钥添加到 GitHub 账户请移步[该 GitHub 官方帮助](https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account)。
 
-更多关于 commit 签名验证请移步该 [GitHub 官方帮助](https://help.github.com/en/github/authenticating-to-github/about-commit-signature-verification)。
+更多关于 commit 签名验证请移步[该 GitHub 官方帮助](https://help.github.com/en/github/authenticating-to-github/about-commit-signature-verification)。
 
 #### 关于在 GitHub.com 上创建的 Commit
 

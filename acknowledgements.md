@@ -14,15 +14,15 @@ title: Acknowledgements
 [GitHub Free for organizations](https://github.com/pricing) 为 TellyLab 提供了组织账户计划并为本站提供 Git 仓库托管。
 
 ### GitHub Pages
-[GitHub Pages](https://pages.github.com) 为本站提供了基于容器的自动化构建和站点的静态托管，以此实现本站的 CI/CD。其中，静态托管服务还囊括了 HTTPS 证书的自动化申请/续签、自定义 CNAME 路由和全球 CDN。
+[GitHub Pages](https://pages.github.com) 为本站提供了基于容器的自动化构建和站点的静态托管，实现了本站的 CI/CD。其中，静态托管服务还囊括了用于 HTTPS 的证书的自动化申请/续签、自定义 CNAME 路由和全球 CDN。
 
 ### GitHub Pages Ruby Gem
 
-本站使用 [GitHub Pages Ruby Gem](https://github.com/github/pages-gem) 保证开发和部署环境的一致性。
+本站使用 [GitHub Pages Ruby Gem](https://github.com/github/pages-gem) 保证开发和部署环境的一致性，并根据 [MIT License](https://github.com/github/pages-gem/blob/master/LICENSE) 获得许可。
 
 ## Jekyll
 
-本站根据 [MIT 许可证](https://github.com/jekyll/jekyll/blob/master/LICENSE)获得许可，在开发和部署环境下使用 [Jekyll](https://jekyllrb.com) 从资源文件生成静态站点。
+本站使用 [Jekyll](https://jekyllrb.com) 构建静态站点，并根据 [MIT License](https://github.com/jekyll/jekyll/blob/master/LICENSE) 获得许可。
 
 ## Let's Encrypt
 
@@ -62,6 +62,4 @@ title: Acknowledgements
 
 本站使用由 [Microsoft Ajax CDN](https://ajax.aspnetcdn.com) 分发的 jQuery 脚本。
 
-## Atom
-
-本站绝大部分的开发工作和博文撰写均在 [Atom](https://atom.io) 文本编辑器中完成。
+Microsoft Ajax CDN 除了使用 Azure CDN 外，没有任何 SLA。

@@ -61,5 +61,3 @@ title: Acknowledgements
 ### Microsoft Ajax CDN
 
 本站使用由 [Microsoft Ajax CDN](https://ajax.aspnetcdn.com) 分发的 jQuery 脚本。
-
-Microsoft Ajax CDN 除了使用 Azure CDN 外，没有任何 SLA。

@@ -185,6 +185,22 @@ a {
   }
 }
 
+.grey {
+  color: $grey-color;
+
+  &:visited {
+    color: $grey-color;
+  }
+}
+
+.dark-grey {
+  color: $grey-color-dark;
+
+  &:visited {
+    color: $grey-color-dark;
+  }
+}
+
 
 
 /**
@@ -274,29 +290,6 @@ pre {
   content: "";
   display: table;
   clear: both;
-}
-
-
-
-/**
- * Icons
- */
-
-.orange {
-  color: #f66a0a;
-}
-
-.grey {
-  color: #828282;
-}
-
-.svg-icon {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  fill: currentColor;
-  padding: 5px 3px 2px 5px;
-  vertical-align: text-bottom;
 }
 
 
@@ -471,24 +464,12 @@ table {
   padding: $spacing-unit 0;
 }
 
-.footer-heading {
-  @include relative-font-size(1.2);
-  font-weight: 300;
-  margin-bottom: $spacing-unit / 2;
-  color: $grey-color-dark;
-
-  &:hover {
-    color: $link-hover-color-grey;
-  }
-}
-
 .footer-col-wrapper {
-  @include relative-font-size(0.9);
-  font-weight: 300;
   color: $grey-color;
 }
 
 .footer-col {
+  font-size: 0.85rem;
   margin-bottom: $spacing-unit;
 }
 
@@ -510,6 +491,17 @@ table {
       padding-right: 0;
       padding-left: $spacing-unit / 2;
     }
+  }
+}
+
+.footer-heading {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: $spacing-unit / 2;
+  color: $grey-color-dark;
+
+  &:hover {
+    color: $link-hover-color-grey;
   }
 }
 

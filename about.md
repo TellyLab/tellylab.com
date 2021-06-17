@@ -3,10 +3,14 @@ layout: page
 title: About
 ---
 
-TellyLab is a website for anything about technology and so on.  
-Bad memory, mark something down here.  
-Bad writing, write about anything.  
-Bad English... mainly in Chinese.  
+TellyLab is a website for anything about technology and so on.
+
+Bad memory, mark something down here.
+
+Bad writing, write about anything.
+
+Bad English... mainly in Chinese.
+
 For any mistake, please let us know.
 
 ## Authors

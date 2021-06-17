@@ -13,33 +13,42 @@ For any mistake, please let us know.
 
 ### Tianao
 
-Dabbled in a lot, mastered none  
-IT engineer, major in network engineering  
-Lives in Ningbo, China
+Dabbled in a lot, mastered none
+
+IT engineer, major in network engineering (datacom communication)
+
+Lives in Shanghai, China
 
 ### Secret
 
-Invited author  
+Invited author
+
 Major in Information and Computing Science
 
 ---
 
 # 关于
 
-TellyLab 是一个科技杂货铺，啥东西都往里堆。  
-硬盘记载数据，键盘发出声音。  
-有的没的，请莫见怪。随缘更新，随时跑路。  
+TellyLab 是一个科技杂货铺，啥东西都往里堆。
+
+硬盘记载数据，键盘发出声音。
+
+有的没的，请莫见怪。随缘更新，随时跑路。
+
 如有纰漏，恳请指正。
 
 ## 作者
 
 ### 天傲
 
-涉猎广泛，鲜有专精  
-IT 从业者，网络工程师  
-现居浙江宁波
+涉猎广泛，鲜有专精
+
+IT 从业者，网络（数据通信）工程师
+
+现居上海
 
 ### Secret
 
-特邀作者  
+特邀作者
+
 计算机向本科在读
